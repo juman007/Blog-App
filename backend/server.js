@@ -19,11 +19,22 @@ connectCloudinary();
 app.use(express.json());
 app.use(cookieParser());
 
-// CORS configuration
+const allowedOrigins = [
+   "https://buletin-frontend.vercel.app",
+   "https://buletin-two.vercel.app",
+];
+
 const corsOptions = {
-   origin: "https://buletin-two.vercel.app", // Your frontend URL
-   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
-   credentials: true, // Allow credentials
+   origin: (origin, callback) => {
+      // Allow requests from allowed origins or no origin (for non-browser tools like Postman)
+      if (allowedOrigins.includes(origin) || !origin) {
+         callback(null, true);
+      } else {
+         callback(new Error("Not allowed by CORS"));
+      }
+   },
+   methods: ["GET", "POST", "PUT", "DELETE"], // Allowed HTTP methods
+   credentials: true, // Allow cookies and credentials
 };
 
 // Use CORS middleware
