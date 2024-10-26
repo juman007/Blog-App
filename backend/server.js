@@ -21,7 +21,7 @@ app.use(cookieParser());
 
 // CORS configuration
 const corsOptions = {
-   origin: "http://localhost:5173", // Your frontend URL
+   origin: "https://buletin-two.vercel.app", // Your frontend URL
    methods: ["GET", "POST", "PUT", "DELETE"], // Allowed methods
    credentials: true, // Allow credentials
 };
