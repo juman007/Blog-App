@@ -30,7 +30,6 @@ const PostDetails = () => {
       try {
          const res = await axios.get(`${backendURL}/api/post/details/${id}`);
          setPost(res.data.post);
-         console.log(res);
 
          setLoader(false);
       } catch (error) {

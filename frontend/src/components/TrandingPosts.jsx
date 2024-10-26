@@ -98,7 +98,6 @@ const TrendingPosts = () => {
                               className="bg-gray-500 text-xs py-1 px-2 rounded-md text-white font-semibold"
                            >
                               {category}
-                              {console.log(category)}
                            </span>
                         ))}
                      </div>
