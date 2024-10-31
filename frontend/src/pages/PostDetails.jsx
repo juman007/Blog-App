@@ -351,6 +351,11 @@ const PostDetails = () => {
                         <p className="font-bold text-sm detail-sec-rignt-title">
                            {truncateText(item.title, 5)}
                         </p>
+                        <div className="flex justify-center w-full">
+                           <p className="text-xs px-3  bg-red-500 text-white text-center rounded-full mt-2 animate-pulse ">
+                              Latset post
+                           </p>
+                        </div>
                         <div className="flex justify-between mt-3">
                            <p className="text-xs">@{item.username}</p>
                            <div className="flex justify-between">
