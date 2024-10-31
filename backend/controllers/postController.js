@@ -162,13 +162,40 @@ const getPostDetails = async (req, res, next) => {
 };
 
 // get recent posts
-
 const getRecentPosts = async (req, res, next) => {
    try {
-      const post = await postModel.find().sort({ createdAt: -1 }).limit(3);
+      const posts = await postModel.find().sort({ createdAt: -1 }).limit(3);
+
+      // Check if posts exist
+      if (!posts || posts.length === 0) {
+         return res.status(404).json({
+            success: false,
+            message: "No recent posts found",
+         });
+      }
+
+      // Format each post's details
+      const formattedPostDetails = posts.map((post) => ({
+         _id: post._id,
+         title: post.title,
+         description: post.description,
+         photo: post.photo,
+         username: post.username,
+         userId: post.userId,
+         categories: post.categories,
+         time: post.time,
+         date: post.date
+            ? post.date.toLocaleDateString("en-GB", {
+                 day: "2-digit",
+                 month: "2-digit",
+                 year: "2-digit",
+              })
+            : null, // Check if date exists before formatting
+      }));
+
       res.json({
          success: true,
-         post,
+         posts: formattedPostDetails,
       });
    } catch (error) {
       console.error(error);

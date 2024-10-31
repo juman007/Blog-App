@@ -41,7 +41,7 @@ const PostDetails = () => {
    const fetchRecentPosts = async () => {
       try {
          const res = await axios.get(`${backendURL}/api/post/recent`); // Adjust API route if needed
-         setRecentPost(res.data.post); // Update state
+         setRecentPost(res.data.posts); // Update state
       } catch (error) {
          console.error("Error fetching recent posts:", error);
       }
