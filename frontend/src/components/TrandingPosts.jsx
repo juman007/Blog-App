@@ -67,7 +67,7 @@ const TrendingPosts = () => {
                   className="border rounded-lg overflow-hidden"
                >
                   {/* Image */}
-                  <div className="h-[150px] w-full">
+                  <div className="h-[150px] w-full tranding-sec-img">
                      <img
                         className="h-full w-full object-cover"
                         src={post.photo}

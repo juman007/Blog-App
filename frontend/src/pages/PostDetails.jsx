@@ -165,7 +165,7 @@ const PostDetails = () => {
    };
 
    return (
-      <div className="mt-20 mb-10 gap-5  w-full md:w-[80%] h-auto m-auto flex flex-col md:flex-row justify-between px-4">
+      <div className="mt-20 mb-10 gap-5  w-full md:w-[80%] h-auto m-auto flex flex-col md:flex-row justify-between px-4 detail-sec-main">
          {/* Left Section */}
          <div className="w-full md:w-[75%] ">
             <h1 className="text-2xl md:text-3xl font-bold mb-2">
@@ -348,7 +348,7 @@ const PostDetails = () => {
                      </div>
 
                      <div className="flex-1">
-                        <p className="font-bold text-sm">
+                        <p className="font-bold text-sm detail-sec-rignt-title">
                            {truncateText(item.title, 5)}
                         </p>
                         <div className="flex justify-between mt-3">

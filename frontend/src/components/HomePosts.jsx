@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { AppContext } from "../context/AppContext";
 import axios from "axios";
 import Loader1 from "./loader/Loader1";
+import Loarder from "./Loarder";
 
 const HomePosts = () => {
    const { search } = useLocation();
@@ -55,7 +56,7 @@ const HomePosts = () => {
    }
 
    return (
-      <div className="px-1 h-auto flex flex-col md:flex-row mt-10">
+      <div className="px-1 h-auto flex flex-col md:flex-row mt-10  top-section-responsive">
          {loader && <Loarder />}
          {noResults && <p>No results found.</p>}
          {!loader && !noResults && posts.length > 0 && (
@@ -68,7 +69,7 @@ const HomePosts = () => {
                >
                   <div className="w-full h-[300px]">
                      <img
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover top-sec-img"
                         src={posts[0].photo}
                         alt=""
                      />
@@ -127,7 +128,7 @@ const HomePosts = () => {
                                  </p>
                               </div>
                            </div>
-                           <h1 className="font-bold text-2xl mt-1">
+                           <h1 className="font-bold text-2xl mt-1  top-sec-heading">
                               {post.title}
                            </h1>
                            <div className="flex items-center gap-x-2 mt-2">

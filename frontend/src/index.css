@@ -5,3 +5,41 @@
 * {
    scroll-behavior: smooth;
 }
+
+@media (min-width: 760px) and (max-width: 1340px) {
+   .home-section-responsive {
+      /* padding: 0 !important; */
+      padding-left: 24px !important;
+      padding-right: 24px !important;
+   }
+   .detail-sec-main {
+      width: 100% !important;
+   }
+
+   .detail-sec-rignt-title{
+      font-size: 13px !important;
+   }
+
+   
+}
+
+@media (max-width: 1340px) {
+   .top-sec-heading {
+      font-size: 14px !important;
+      line-height: normal !important;
+   }
+   .top-sec-img {
+      border-radius: 10px !important;
+   }
+}
+
+.tranding-sec-img {
+   width: 100% !important;
+   height: auto !important;
+}
+
+.top-section-responsive {
+   padding: 0 !important;
+   padding-left: 24px !important;
+   padding-right: 24px !important;
+}
