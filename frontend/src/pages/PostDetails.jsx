@@ -339,7 +339,7 @@ const PostDetails = () => {
                      to={`/posts/post/${item._id}`}
                      className="border w-full h-[100px] flex  gap-x-1 mb-2"
                   >
-                     <div className="h-full border w-[120px]">
+                     <div className="h-full border w-[1/2">
                         <img
                            className="w-full h-full object-cover"
                            src={item.photo}
@@ -347,7 +347,7 @@ const PostDetails = () => {
                         />
                      </div>
 
-                     <div className="flex-1">
+                     <div className="w-1/2">
                         <p className="font-bold text-sm detail-sec-rignt-title">
                            {truncateText(item.title, 5)}
                         </p>
