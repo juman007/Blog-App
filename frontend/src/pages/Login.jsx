@@ -28,7 +28,7 @@ const Login = () => {
             toast.success(res.data.message);
             setUser(res.data);
             navigate("/");
-            window.location.reload();
+            // window.location.reload();
          } else {
             toast.error(res.data.message);
          }
