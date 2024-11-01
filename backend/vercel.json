@@ -1,3 +1,5 @@
+
+
 {
   "version": 2,
   "builds": [
@@ -7,6 +9,17 @@
     }
   ],
   "routes": [
-    { "src": "/(.*)", "dest": "server.js" }
+    {
+      "src": "/api/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "https://buletin-frontend.vercel.app",
+        "Access-Control-Allow-Credentials": "true"
+      },
+      "dest": "server.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "server.js"
+    }
   ]
 }
